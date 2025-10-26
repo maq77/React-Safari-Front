@@ -1,7 +1,10 @@
 {
   "version": 2,
+  "buildCommand": "npm ci && npm run build",
+  "installCommand": "npm ci",
+  "framework": "vite",
   "rewrites": [
-    { "source": "/api/:path*", "destination": "http://maqmohamed82-001-site1.qtempurl.com/api/:path*" },
+    { "source": "/api/:path*", "destination": "http://safari-api-mohamed.runasp.net/api/:path*" },
     { "source": "/(.*)", "destination": "/" }
   ]
 }
