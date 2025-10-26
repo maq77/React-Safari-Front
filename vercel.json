@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "npm ci && npm run build",
-  "installCommand": "npm ci",
+  "buildCommand": "npm install --include=optional && npm run build",
+  "installCommand": "npm install --include=optional",
   "framework": "vite",
   "rewrites": [
     { "source": "/api/:path*", "destination": "http://safari-api-mohamed.runasp.net/api/:path*" },
