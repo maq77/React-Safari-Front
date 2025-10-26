@@ -1,22 +1,26 @@
+// vite.config.js (ESM-safe)
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from "path";
+import { fileURLToPath } from 'url'
+import { dirname, resolve } from 'path'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"),
+      '@': resolve(__dirname, 'src'),
     },
   },
   server: {
     proxy: {
       '/api': {
-        target: 'http://maqmohamed82-001-site1.qtempurl.com',
+        target: 'http://safari-api-mohamed.runasp.net/',
         changeOrigin: true,
-        secure: false
-      }
-    }
-    //port: 5173
-  }
+        secure: false,
+      },
+    },
+  },
 })

@@ -1,5 +1,7 @@
 {
+  "version": 2,
   "rewrites": [
-    { "source": "/api/:path*", "destination": "http://maqmohamed82-001-site1.qtempurl.com/api/:path*" }
+    { "source": "/api/:path*", "destination": "http://maqmohamed82-001-site1.qtempurl.com/api/:path*" },
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
