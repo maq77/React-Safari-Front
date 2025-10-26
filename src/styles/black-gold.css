@@ -1,0 +1,45 @@
+/* src/styles/black-gold.css */
+
+/* Tailwind v4 entry */
+@import "tailwindcss";
+
+/* ---- Base ---- */
+@layer base {
+  body { @apply bg-[#0a0a0a] text-[#d1d1d1]; }
+}
+
+/* ---- Helpers (for JSX) ---- */
+/* These are custom classes you can use in JSX, but DO NOT @apply them elsewhere */
+@layer components {
+  .text-gold { @apply text-[#D4AF37]; }
+  .text-gold-light { @apply text-[#FFD700]; }
+}
+
+/* ---- Reusable components (use raw utilities in @apply) ---- */
+@layer components {
+  .nav-bar { @apply fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-[#D4AF37]/30; }
+  .nav-inner { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+  .nav-link { @apply text-lg text-[#d1d1d1] hover:text-[#FFD700] transition; }
+  .nav-link-active { @apply text-[#FFD700]; }
+
+  .btn-gold { @apply bg-[#D4AF37] text-black font-semibold rounded-xl px-6 py-3 transition-all hover:bg-[#FFD700] shadow-lg; }
+  .btn-ghost { @apply border border-[#B8860B] text-[#D4AF37] rounded-xl px-4 py-2 hover:bg-[#1a1a1a] transition; }
+
+  .card { @apply bg-[#0f0f0f]/90 border border-[#D4AF37]/20 rounded-2xl shadow-lg hover:shadow-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition; }
+
+  .badge-gold { @apply bg-[#D4AF37] text-black px-3 py-1 rounded-full text-sm font-semibold; }
+  .pill-dark { @apply bg-black/70 px-3 py-1 rounded-full text-sm; }
+
+  .input-dark { @apply w-full px-4 py-3 bg-[#111111] rounded-lg outline-none focus:ring-2 focus:ring-[#D4AF37] text-white placeholder-gray-400; }
+  .textarea-dark { @apply w-full px-4 py-3 bg-[#111111] rounded-lg outline-none focus:ring-2 focus:ring-[#D4AF37] text-white placeholder-gray-400; }
+
+  .modal-scrim { @apply fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50; }
+  .modal-panel { @apply bg-[#0f0f0f] border border-[#D4AF37]/30 p-8 rounded-2xl shadow-2xl max-w-2xl w-full; }
+
+  .footer { @apply relative bg-[#0b0b0b] border-t border-[#D4AF37]/20 py-12 px-4 mt-12; }
+  /* Use raw hex here (not text-gold) so @apply stays valid */
+  .footer-title { @apply font-bold text-[#D4AF37] mb-4; }
+  .footer-link { @apply block text-sm text-gray-400 hover:text-[#FFD700] transition; }
+
+  .img-frame { @apply rounded-xl border border-[#D4AF37]/20 shadow hover:border-[#D4AF37]/50 transition; }
+}

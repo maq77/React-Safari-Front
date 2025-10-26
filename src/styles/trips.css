@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* custom non-tailwind animations & utilities */
+@keyframes loadingBar {
+  0% { width: 0% }
+  100% { width: 100% }
+}
+
+.fade-in {
+  animation: fadeIn 0.45s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Nice subtle shimmer for background specks used in original design */
+.shimmer-dot { animation: shimmer 3s infinite; }
+@keyframes shimmer {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}

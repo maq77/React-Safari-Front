@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required basics -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- App identity -->
+    <title>Hurghada Safari</title>
+    <meta
+      name="description"
+      content="Desert adventures, crystal waters, and unforgettable memories — book your Hurghada Safari."
+    />
+
+    <!-- Theming (Black & Gold) -->
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="msapplication-TileColor" content="#0a0a0a" />
+    <!-- iOS status bar -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Icons (replace with your real paths in /public) -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Social preview -->
+    <meta property="og:title" content="Hurghada Safari" />
+    <meta
+      property="og:description"
+      content="Desert adventures, crystal waters, and unforgettable memories."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.example/" />
+    <meta property="og:image" content="https://your-domain.example/og-cover.jpg" />
+    <meta property="og:site_name" content="Hurghada Safari" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hurghada Safari" />
+    <meta
+      name="twitter:description"
+      content="Desert adventures, crystal waters, and unforgettable memories."
+    />
+    <meta name="twitter:image" content="https://your-domain.example/og-cover.jpg" />
+
+    <!-- Performance: preconnect (add only what you actually use) -->
+    <!-- Example: If you use a hosted font, uncomment these:
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    -->
+
+    <!-- Progressive enhancement hint for iOS full-bleed -->
+    <style>
+      /* Safe, tiny CSS to ensure root fills screen nicely on mobile */
+      html, body, #root { height: 100%; }
+      body {
+        margin: 0;
+        background: #0a0a0a;
+        color: #d1d1d1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+      /* Hide tap highlight on mobile for a cleaner feel */
+      * { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+      /* iOS notch support */
+      :root { --safe-top: env(safe-area-inset-top); --safe-bottom: env(safe-area-inset-bottom); }
+    </style>
+  </head>
+
+  <body>
+    <noscript>
+      <div style="padding:16px; text-align:center; color:#FFD700; background:#111; font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';">
+        JavaScript is required to run Hurghada Safari. Please enable it in your browser settings.
+      </div>
+    </noscript>
+
+    <div id="root"></div>
+
+    <!-- Vite entry -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
